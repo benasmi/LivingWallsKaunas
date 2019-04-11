@@ -21,20 +21,11 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2DS-xe-b1b">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWs-lP-hkG" customClass="CustomButton" customModule="FinalProject" customModuleProvider="target">
-                                <rect key="frame" x="168.5" y="607" width="38" height="30"/>
-                                <state key="normal" title="Black">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeToBlack:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ydb-Nd-C6v"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xx9-EB-oJP">
-                                <rect key="frame" x="162.5" y="537" width="50" height="50"/>
+                                <rect key="frame" x="152.5" y="507" width="70" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="CDR-6K-xy2"/>
-                                    <constraint firstAttribute="height" constant="50" id="gMN-bN-lkb"/>
+                                    <constraint firstAttribute="width" constant="70" id="CDR-6K-xy2"/>
+                                    <constraint firstAttribute="height" constant="70" id="gMN-bN-lkb"/>
                                 </constraints>
                                 <state key="normal" image="drawButton"/>
                                 <connections>
@@ -47,66 +38,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZCF-DH-mGz">
-                                <rect key="frame" x="30" y="607" width="110" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmi-xU-X2r" customClass="CustomButton" customModule="FinalProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="3kB-1a-SZw"/>
-                                            <constraint firstAttribute="height" constant="30" id="svB-9g-tET"/>
-                                        </constraints>
-                                        <state key="normal" title="Red">
-                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="changeToRed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="WEZ-7G-Kvw"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iW-lV-69b" customClass="CustomButton" customModule="FinalProject" customModuleProvider="target">
-                                        <rect key="frame" x="60" y="0.0" width="50" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="3m7-X1-MkO"/>
-                                            <constraint firstAttribute="width" constant="50" id="yd7-UY-lTL"/>
-                                        </constraints>
-                                        <state key="normal" title="Blue"/>
-                                        <connections>
-                                            <action selector="changeToBlue:" destination="BV1-FR-VrT" eventType="touchUpInside" id="jrI-9Z-UpL"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QkF-8X-12K">
-                                <rect key="frame" x="229" y="607" width="110" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TN-tI-2kt" customClass="CustomButton" customModule="FinalProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="BRv-Pa-xr3"/>
-                                            <constraint firstAttribute="height" constant="30" id="m9t-Q4-JdQ"/>
-                                        </constraints>
-                                        <state key="normal" title="Green">
-                                            <color key="titleColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="changeToGreen:" destination="BV1-FR-VrT" eventType="touchUpInside" id="H5T-sX-R8p"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xU5-Iv-By5" customClass="CustomButton" customModule="FinalProject" customModuleProvider="target">
-                                        <rect key="frame" x="60" y="0.0" width="50" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="epN-P0-fjI"/>
-                                            <constraint firstAttribute="height" constant="30" id="tsw-Bz-ZhT"/>
-                                        </constraints>
-                                        <state key="normal" title="White">
-                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="changeToWhite:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ewg-xN-6Xv"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNY-L1-k1f" customClass="CustomButton" customModule="FinalProject" customModuleProvider="target">
                                 <rect key="frame" x="326" y="38" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -115,27 +46,26 @@
                                     <action selector="restartButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="yMM-tx-eAa"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t6I-oU-omG">
+                                <rect key="frame" x="305" y="181" width="70" height="305"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="XWs-lP-hkG" firstAttribute="top" secondItem="2DS-xe-b1b" secondAttribute="bottom" constant="-60" id="6fC-R2-u7i"/>
-                            <constraint firstItem="XWs-lP-hkG" firstAttribute="centerX" secondItem="jJF-kd-sxH" secondAttribute="centerX" id="9qH-jc-3Dr"/>
-                            <constraint firstItem="QkF-8X-12K" firstAttribute="top" secondItem="2DS-xe-b1b" secondAttribute="bottom" constant="-60" id="A6Q-vt-ptd"/>
-                            <constraint firstItem="ZCF-DH-mGz" firstAttribute="top" secondItem="2DS-xe-b1b" secondAttribute="bottom" constant="-60" id="BtD-hE-O5d"/>
-                            <constraint firstItem="XWs-lP-hkG" firstAttribute="top" secondItem="Xx9-EB-oJP" secondAttribute="bottom" constant="20" id="GTs-dT-yZh"/>
+                            <constraint firstItem="Xx9-EB-oJP" firstAttribute="top" secondItem="2DS-xe-b1b" secondAttribute="bottom" constant="-160" id="OPD-9k-fJO"/>
                             <constraint firstItem="2DS-xe-b1b" firstAttribute="trailing" secondItem="1P0-aj-FGT" secondAttribute="trailing" id="UCw-oQ-Cof"/>
                             <constraint firstItem="bVg-3l-5iW" firstAttribute="centerX" secondItem="jJF-kd-sxH" secondAttribute="centerX" id="WRG-Hm-3PY"/>
-                            <constraint firstItem="2DS-xe-b1b" firstAttribute="leading" secondItem="ZCF-DH-mGz" secondAttribute="trailing" constant="-140" id="Xu1-VK-bXK"/>
                             <constraint firstItem="2DS-xe-b1b" firstAttribute="bottom" secondItem="1P0-aj-FGT" secondAttribute="bottom" id="dAD-ey-uHc"/>
                             <constraint firstItem="2DS-xe-b1b" firstAttribute="leading" secondItem="jJF-kd-sxH" secondAttribute="leading" id="ghe-Tu-wZh"/>
                             <constraint firstItem="2DS-xe-b1b" firstAttribute="top" secondItem="jJF-kd-sxH" secondAttribute="top" id="j72-an-RHJ"/>
                             <constraint firstItem="bVg-3l-5iW" firstAttribute="centerY" secondItem="jJF-kd-sxH" secondAttribute="centerY" id="lhg-hs-tEW"/>
-                            <constraint firstItem="QkF-8X-12K" firstAttribute="leading" secondItem="2DS-xe-b1b" secondAttribute="trailing" constant="-146" id="o8e-Uy-GcO"/>
                             <constraint firstItem="Xx9-EB-oJP" firstAttribute="centerX" secondItem="jJF-kd-sxH" secondAttribute="centerX" id="ySv-zI-qJX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1P0-aj-FGT"/>
                     </view>
                     <connections>
+                        <outlet property="brushesPickerView" destination="t6I-oU-omG" id="Dny-8M-8cJ"/>
                         <outlet property="drawButtonOutlet" destination="Xx9-EB-oJP" id="yzM-Hn-Ykm"/>
                         <outlet property="restartBtnOutlet" destination="eNY-L1-k1f" id="KCm-Nv-QYy"/>
                         <outlet property="sceneView" destination="2DS-xe-b1b" id="WV8-T3-4dr"/>

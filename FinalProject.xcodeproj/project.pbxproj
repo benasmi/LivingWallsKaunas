@@ -51,6 +51,7 @@
 		A3A11561225F9C800082BC39 /* Plane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		A3A11563225F9C890082BC39 /* GridMaterial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridMaterial.swift; sourceTree = "<group>"; };
 		A3A11565225F9C910082BC39 /* ARSceneManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSceneManager.swift; sourceTree = "<group>"; };
+		A3A11567225FC0C50082BC39 /* Verdana.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Verdana.ttf; sourceTree = "<group>"; };
 		A3E3638A225E042C00CA98F6 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E3638D225E042C00CA98F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3E3638F225E042C00CA98F6 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 		A3E3638C225E042C00CA98F6 /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				A3A11567225FC0C50082BC39 /* Verdana.ttf */,
 				A3A11565225F9C910082BC39 /* ARSceneManager.swift */,
 				A3A11563225F9C890082BC39 /* GridMaterial.swift */,
 				A3A11561225F9C800082BC39 /* Plane.swift */,

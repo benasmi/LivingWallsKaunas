@@ -30,6 +30,7 @@ class ARSceneManager: NSObject {
         }
     }
     
+    
     let configuration = ARWorldTrackingConfiguration()
     
     func attach(to sceneView: ARSCNView) {
@@ -39,19 +40,19 @@ class ARSceneManager: NSObject {
         self.sceneView!.delegate = self
         
         startPlaneDetection()
-        configuration.isLightEstimationEnabled = true
+        //configuration.isLightEstimationEnabled = true
         
         sceneView.scene.physicsWorld.gravity = SCNVector3(0, -3.0, 0)
         
     }
     
     func displayDegubInfo() {
-        sceneView?.showsStatistics = true
+        sceneView?.showsStatistics = false
         sceneView?.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
     }
     
     func detachDebugInfo(){
-        sceneView?.showsStatistics = true
+        sceneView?.showsStatistics = false
         sceneView?.debugOptions = []
     }
     

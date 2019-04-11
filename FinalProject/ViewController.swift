@@ -30,6 +30,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var timer: Timer?
     let sceneManager = ARSceneManager()
     
+    var previousPoint: SCNVector3?
+    
     var shouldDrawWalls: Bool = false;
     var isRestartButtonShown = false
     var currentColor: UIColor = UIColor.black
@@ -100,13 +102,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         canvasWallNode.addChildNode(box)
     }
     
-    private func createBox() -> SCNNode {
-        let box = SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0.01)
-        let boxNode = SCNNode(geometry: box)
-        boxNode.physicsBody = SCNPhysicsBody(type: .static, shape: SCNPhysicsShape(geometry: box, options: nil))
-        
-        return boxNode
-    }
+   
     
     private func position(node: SCNNode, atHit hit: ARHitTestResult) {
         node.transform = SCNMatrix4(hit.anchor!.transform)
@@ -178,7 +174,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 
                 
                 switch self.currentBrush{
-                    
                 case 0:
                     customBrush = SCNSphere(radius: 0.02)
                     (customBrush as! SCNSphere).materials = [spehereMaterial]
@@ -189,7 +184,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                     customBrush = SCNTorus(ringRadius: 0.04, pipeRadius: 0.02)
                     (customBrush as! SCNTorus).materials = [spehereMaterial]
                 default:
-                    customBrush = SCNSphere(radius: 0.02)
+                    customBrush = SCNSphere(radius: 0.01)
                     (customBrush as! SCNSphere).materials = [spehereMaterial]
                 }
                 
@@ -205,6 +200,31 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
         }
         
+    }
+    
+    private func createBox() -> SCNNode {
+        
+        
+        var customBrush: Any?
+        let spehereMaterial = SCNMaterial()
+        spehereMaterial.diffuse.contents = self.currentColor
+        
+        
+        switch self.currentBrush{
+            
+        case 3:
+            customBrush = SCNSphere(radius: 0.012)
+            (customBrush as! SCNSphere).materials = [spehereMaterial]
+        default:
+            customBrush = SCNSphere(radius: 0.02)
+            (customBrush as! SCNSphere).materials = [spehereMaterial]
+            
+        }
+        
+        let boxNode = SCNNode(geometry: customBrush as? SCNGeometry)
+        boxNode.physicsBody = SCNPhysicsBody(type: .static, shape: SCNPhysicsShape(geometry: (customBrush as? SCNGeometry)!, options: nil))
+        
+        return boxNode
     }
     
     func showRestartButton(){
@@ -269,19 +289,19 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
         
-        var myView = UIView(frame: CGRect(0, 0, pickerView.bounds.width - 30, 60))
+        var myView = UIView(frame: CGRect(0, 0, 70, 70))
         
-        var myImageView = UIImageView(frame: CGRect(0, 0, 50, 50))
+        var myImageView = UIImageView(frame: CGRect(0, 0, 70, 70))
         
         switch row {
         case 0:
-            myImageView.image = UIImage(named:"drawButton")
+            myImageView.image = UIImage(named:"can_sphere")
         case 1:
-            myImageView.image = UIImage(named:"drawButton")
+            myImageView.image = UIImage(named:"can_cube")
         case 2:
-            myImageView.image = UIImage(named:"drawButton")
+            myImageView.image = UIImage(named:"can_torus")
         case 3:
-            myImageView.image = UIImage(named:"drawButton")
+            myImageView.image = UIImage(named:"can_sphere")
         default:
             myImageView.image = nil
         }
@@ -299,6 +319,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource{
             shouldDrawWalls = true
             sceneManager.attach(to: sceneView)
             sceneManager.displayDegubInfo()
+            sceneManager.showPlanes = true
             sceneManager.startPlaneDetection()
         }else{
             sceneManager.detachDebugInfo()
@@ -307,6 +328,17 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource{
             shouldDrawWalls = false
             viewDidLoad()
         }
+    }
+    
+    func lineFrom(vector vector1: SCNVector3, toVector vector2: SCNVector3) -> SCNGeometry {
+        
+        let indices: [Int32] = [0, 1]
+        
+        let source = SCNGeometrySource(vertices: [vector1, vector2])
+        let element = SCNGeometryElement(indices: indices, primitiveType: .line)
+        
+        return SCNGeometry(sources: [source], elements: [element])
+        
     }
 }
 

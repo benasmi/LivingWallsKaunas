@@ -11,6 +11,9 @@
 		5A57AD6D7C01CF9CB08A3E24 /* Pods_FinalProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C8E231F29130996F259000 /* Pods_FinalProjectUITests.framework */; };
 		5FEA9A9B1BC90BD4336C61E1 /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADB4E82C25E0224D69379BE /* Pods_FinalProject.framework */; };
 		A3A11560225E8ED20082BC39 /* CustomExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A1155F225E8ED20082BC39 /* CustomExtensions.swift */; };
+		A3A11562225F9C800082BC39 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A11561225F9C800082BC39 /* Plane.swift */; };
+		A3A11564225F9C890082BC39 /* GridMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A11563225F9C890082BC39 /* GridMaterial.swift */; };
+		A3A11566225F9C910082BC39 /* ARSceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A11565225F9C910082BC39 /* ARSceneManager.swift */; };
 		A3E3638E225E042C00CA98F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E3638D225E042C00CA98F6 /* AppDelegate.swift */; };
 		A3E36390225E042C00CA98F6 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = A3E3638F225E042C00CA98F6 /* art.scnassets */; };
 		A3E36392225E042C00CA98F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E36391225E042C00CA98F6 /* ViewController.swift */; };
@@ -45,6 +48,9 @@
 		54C8E231F29130996F259000 /* Pods_FinalProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C77548A2BA51ADA2C945A3 /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		A3A1155F225E8ED20082BC39 /* CustomExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExtensions.swift; sourceTree = "<group>"; };
+		A3A11561225F9C800082BC39 /* Plane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		A3A11563225F9C890082BC39 /* GridMaterial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridMaterial.swift; sourceTree = "<group>"; };
+		A3A11565225F9C910082BC39 /* ARSceneManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSceneManager.swift; sourceTree = "<group>"; };
 		A3E3638A225E042C00CA98F6 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E3638D225E042C00CA98F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3E3638F225E042C00CA98F6 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -133,6 +139,9 @@
 		A3E3638C225E042C00CA98F6 /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				A3A11565225F9C910082BC39 /* ARSceneManager.swift */,
+				A3A11563225F9C890082BC39 /* GridMaterial.swift */,
+				A3A11561225F9C800082BC39 /* Plane.swift */,
 				A3E3638D225E042C00CA98F6 /* AppDelegate.swift */,
 				A3E3638F225E042C00CA98F6 /* art.scnassets */,
 				A3E36391225E042C00CA98F6 /* ViewController.swift */,
@@ -403,7 +412,10 @@
 			files = (
 				A3A11560225E8ED20082BC39 /* CustomExtensions.swift in Sources */,
 				A3E36392225E042C00CA98F6 /* ViewController.swift in Sources */,
+				A3A11562225F9C800082BC39 /* Plane.swift in Sources */,
 				A3E3638E225E042C00CA98F6 /* AppDelegate.swift in Sources */,
+				A3A11566225F9C910082BC39 /* ARSceneManager.swift in Sources */,
+				A3A11564225F9C890082BC39 /* GridMaterial.swift in Sources */,
 				A3E363BE225E18F600CA98F6 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +595,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ANJ4ZHX8WX;
 				INFOPLIST_FILE = FinalProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -602,6 +615,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ANJ4ZHX8WX;
 				INFOPLIST_FILE = FinalProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
